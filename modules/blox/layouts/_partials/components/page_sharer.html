@@ -2,14 +2,11 @@
 <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
   {{ range where site.Data.page_sharer.links "enable" true }}
 
-  {{/* Utilise `urlquery` over `htmlEscape` to encode sharing URL */}}
-  {{/* See https://github.com/HugoBlox/kit/pull/2726 */}}
-  {{ $link := replace .url "{url}" ($.Permalink | urlquery) }}
-  {{ $link = replace $link "{title}" ($.Title | urlquery) }}
-  {{/* Workaround `urlquery` encoding for mailto as `urlquery` encodes `+` as `%2B` and ` ` (space) as `+` */}}
-  {{ if eq (urls.Parse $link).Scheme "mailto" }}
-    {{ $link = replace $link "+" "%20" }}
-  {{ end }}
+  {{/* mailto URIs require percent-encoding (%20 for spaces) per RFC 6068, not form-encoding (+ for spaces). */}}
+  {{/* Use urls.PathEscape for mailto; urlquery for other schemes (https, etc.). */}}
+  {{ $is_mailto := eq (urls.Parse .url).Scheme "mailto" }}
+  {{ $link := replace .url "{url}" (cond $is_mailto (urls.PathEscape $.Permalink) (urlquery $.Permalink)) }}
+  {{ $link = replace $link "{title}" (cond $is_mailto (urls.PathEscape $.Title) (urlquery $.Title)) }}
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
