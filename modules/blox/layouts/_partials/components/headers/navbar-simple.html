@@ -104,7 +104,7 @@
         <li class="lg:px-2">
           <select onchange="document.documentElement.setAttribute('data-theme-pack', this.value); localStorage.setItem('hb-theme-pack', this.value);" class="bg-transparent text-[var(--hb-color-header-fg)] border-none focus:ring-0 cursor-pointer text-sm font-medium">
             <option value="">Theme</option>
-            {{ range $name, $data := site.Data.themes }}
+            {{ range $name, $data := hugo.Data.themes }}
               <option value="{{ $name }}">{{ $name | humanize }}</option>
             {{ end }}
           </select>

@@ -1,6 +1,6 @@
 {{ if ne .Params.share false }}
 <section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
-  {{ range where site.Data.page_sharer.links "enable" true }}
+  {{ range where hugo.Data.page_sharer.links "enable" true }}
 
   {{/* mailto URIs require percent-encoding (%20 for spaces) per RFC 6068, not form-encoding (+ for spaces). */}}
   {{/* Use urls.PathEscape for mailto; urlquery for other schemes (https, etc.). */}}

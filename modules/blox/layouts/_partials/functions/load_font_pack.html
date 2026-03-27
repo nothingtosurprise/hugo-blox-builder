@@ -29,13 +29,13 @@
 
 {{ if $vendor }}
   {{/* Third-party font pack: data/fonts/vendor/name.yaml */}}
-  {{ $vendor_fonts := index site.Data.fonts $vendor }}
+  {{ $vendor_fonts := index hugo.Data.fonts $vendor }}
   {{ if $vendor_fonts }}
     {{ $raw_pack = index $vendor_fonts $name }}
   {{ end }}
 {{ else }}
   {{/* Built-in or user font pack: data/fonts/name.yaml */}}
-  {{ with index site.Data.fonts $name }}
+  {{ with index hugo.Data.fonts $name }}
     {{ $raw_pack = . }}
   {{ end }}
 {{ end }}

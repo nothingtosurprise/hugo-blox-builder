@@ -9,7 +9,7 @@
 {{ $block_type = lower $block_type }}
 
 {{/* Handle block renames/aliases */}}
-{{ range $r := site.Data.blox_aliases.renames }}
+{{ range $r := hugo.Data.blox_aliases.renames }}
   {{ $block_type = cond (eq $block_type $r.old) $r.new $block_type }}
 {{ end }}
 

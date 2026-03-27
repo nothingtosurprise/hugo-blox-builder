@@ -8,7 +8,7 @@
 {{ $layout_config := .layout }}
 
 <style>
-  {{ range $pack_name, $pack_data := site.Data.themes }}
+  {{ range $pack_name, $pack_data := hugo.Data.themes }}
     {{ if $pack_data.hugoblox }}
       {{ $theme := $pack_data.hugoblox }}
       

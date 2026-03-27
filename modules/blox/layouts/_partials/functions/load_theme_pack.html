@@ -29,13 +29,13 @@
 
 {{ if $vendor }}
   {{/* Third-party theme: data/themes/vendor/name.yaml */}}
-  {{ $vendor_themes := index site.Data.themes $vendor }}
+  {{ $vendor_themes := index hugo.Data.themes $vendor }}
   {{ if $vendor_themes }}
     {{ $raw_theme = index $vendor_themes $name }}
   {{ end }}
 {{ else }}
   {{/* Built-in or user theme: data/themes/name.yaml */}}
-  {{ $raw_theme = index site.Data.themes $name }}
+  {{ $raw_theme = index hugo.Data.themes $name }}
 {{ end }}
 
 {{/* Validate theme structure */}}

@@ -17,7 +17,7 @@
   {{ with $page.Params.sections_source }}
     {{ $key := . }}
     {{ if hasPrefix $key "pages/" }}{{ $key = replace $key "pages/" "" }}{{ end }}
-    {{ with index $.Site.Data.pages $key }}
+    {{ with index hugo.Data.pages $key }}
       {{ $base := .sections }}
       {{ if $sections }}
         {{ $merged := slice }}
@@ -54,7 +54,7 @@
       {{ end }}
     {{ end }}
     {{ if eq $page.RelPermalink "/" }}{{ $p = "home" }}{{ end }}
-    {{ with index $.Site.Data.pages $p }}
+    {{ with index hugo.Data.pages $p }}
       {{ $sections = .sections }}
     {{ end }}
   {{ end }}
@@ -68,7 +68,7 @@
         {{ $ref := lower . }}
         {{ $path := cond (hasPrefix $ref "blocks/") $ref (printf "blocks/%s" $ref) }}
         {{ $parts := split $path "/" }}
-        {{ $data := $.Site.Data }}
+        {{ $data := hugo.Data }}
         {{ range $j, $p := $parts }}
           {{ if $data }}{{ $data = index $data $p }}{{ end }}
         {{ end }}
@@ -87,7 +87,7 @@
     {{ if or (not $block.demo) ($block.demo | and (eq (os.Getenv "HUGO_BLOX_DEMO") "true")) }}
       {{- $block_type := partial "hbx/resolve-block-param" (dict "config" $block "context" "content section") | default "markdown" -}}
       {{ $block_type = lower $block_type }}
-      {{ range $r := .Site.Data.blox_aliases.renames }}
+      {{ range $r := hugo.Data.blox_aliases.renames }}
         {{ $block_type = cond (eq $block_type $r.old) $r.new $block_type }}
       {{ end }}
       

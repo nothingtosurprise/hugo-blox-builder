@@ -14,7 +14,7 @@
 {{- $hb_icon_check := partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "style=\"display: none;\"") -}}
 
 {{/* Verify Hugo Blox data structures */}}
-{{- $hb_data_check := site.Data.icons.hero -}}
+{{- $hb_data_check := hugo.Data.icons.hero -}}
 
 {{/* Verify Hugo Blox UID generation */}}
 {{- $hb_uid_check := partial "functions/uid.html" . -}}
@@ -47,7 +47,7 @@
 {{- end -}}
 
 {{/* Verify Hugo Blox brands icon pack */}}
-{{- $hb_brands_check := site.Data.icons.brands -}}
+{{- $hb_brands_check := hugo.Data.icons.brands -}}
 
 {{/* Debug output to identify failing check (dev only) */}}
 {{- if getenv "HUGO_BLOX_DEBUG" -}}

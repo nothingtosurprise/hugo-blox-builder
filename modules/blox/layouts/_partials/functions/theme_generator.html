@@ -20,8 +20,8 @@
 {{ $surfaces_overrides := $config.surfaces | default dict }}
 
 {{/* Load Theme Data using the new loader */}}
-{{ if not site.Data.themes }}
-  {{ warnf "THEME ENGINE ERROR: site.Data.themes is empty! Check modules/blox-tailwind/data/themes/" }}
+{{ if not hugo.Data.themes }}
+  {{ warnf "THEME ENGINE ERROR: hugo.Data.themes is empty! Check modules/blox-tailwind/data/themes/" }}
 {{ end }}
 
 {{ $light_theme := partial "functions/load_theme_pack" $light_theme_name }}

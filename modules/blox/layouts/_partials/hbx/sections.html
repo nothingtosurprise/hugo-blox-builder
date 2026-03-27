@@ -6,7 +6,7 @@
 {{- with .Params.sections_source -}}
   {{- $key := . -}}
   {{- if hasPrefix $key "pages/" -}}{{- $key = (replace $key "pages/" "") -}}{{- end -}}
-  {{- with index site.Data.pages $key -}}
+  {{- with index hugo.Data.pages $key -}}
     {{- $base := .sections -}}
     {{- if $sections -}}
       {{- $merged := slice -}}
@@ -53,7 +53,7 @@
   {{- if eq $.RelPermalink "/" -}}
     {{- $p = "home" -}}
   {{- end -}}
-  {{- with index site.Data.pages $p -}}
+  {{- with index hugo.Data.pages $p -}}
     {{- $sections = .sections -}}
     {{- $source = printf "data/pages/%s.yaml" $p -}}
   {{- end -}}
@@ -68,7 +68,7 @@
       {{- $ref := . | lower -}}
       {{- $path := cond (hasPrefix $ref "blocks/") $ref (printf "blocks/%s" $ref) -}}
       {{- $parts := split $path "/" -}}
-      {{- $data := site.Data -}}
+      {{- $data := hugo.Data -}}
       {{- range $j, $p := $parts -}}
         {{- if $data -}}
           {{- $data = index $data $p -}}

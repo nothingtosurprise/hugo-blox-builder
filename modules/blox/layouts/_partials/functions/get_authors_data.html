@@ -8,17 +8,17 @@
   Usage:
     {{ $authors := partialCached "functions/get_authors_data" . site.Language.Lang }}
 
-  Returns: map of slug → author data (same shape as site.Data.authors)
+  Returns: map of slug → author data (same shape as hugo.Data.authors)
 */}}
 
-{{- $authors := site.Data.authors -}}
+{{- $authors := hugo.Data.authors -}}
 {{- if not $authors -}}
   {{- $authors = dict -}}
 {{- end -}}
 
 {{/* Check for language-specific author overrides */}}
 {{- $lang := site.Language.Lang -}}
-{{- $langData := index site.Data $lang -}}
+{{- $langData := index hugo.Data $lang -}}
 {{- if $langData -}}
   {{- $langAuthors := index $langData "authors" -}}
   {{- if $langAuthors -}}
