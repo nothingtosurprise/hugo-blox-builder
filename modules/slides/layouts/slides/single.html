@@ -100,7 +100,7 @@
   <div class="container mx-auto px-4 sm:px-6 max-w-5xl py-12" x-data="{ copied: false, showCitation: false, copyText: {{ $copy_link_label | jsonify }}, citationCopied: false, citationCopyText: {{ $copy_citation_label | jsonify }}, citationValue: {{ $citation_copy | jsonify }} }">
     
     {{/* Back to library link */}}
-    <a href="{{ "/slides/" | relURL }}" class="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary-600 dark:hover:text-primary-400 mb-6 transition-colors">
+    <a href="{{ "slides/" | relURL }}" class="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-primary-600 dark:hover:text-primary-400 mb-6 transition-colors">
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
       </svg>
@@ -195,7 +195,7 @@
           <h2 class="text-lg font-semibold text-zinc-900 dark:text-zinc-100 mb-2">{{ $topics_label }}</h2>
           <div class="flex flex-wrap gap-2">
             {{ range $topics }}
-            <a href="{{ "/slides/" | relURL }}" class="px-3 py-1 rounded-full text-sm font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-primary-100 dark:hover:bg-primary-900/40 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+            <a href="{{ "slides/" | relURL }}" class="px-3 py-1 rounded-full text-sm font-medium bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-primary-100 dark:hover:bg-primary-900/40 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
               {{ . }}
             </a>
             {{ end }}
