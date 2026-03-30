@@ -40,14 +40,8 @@ jobs:
               uses: tj-actions/changed-files@v47
               with:
                   files: |
-                      templates/academic-cv/**
-                      templates/resume/**
-                      templates/blog/**
-                      templates/documentation/**
-                      templates/link-in-bio/**
-                      templates/landing-page/**
-                      templates/dev-portfolio/**
-                      templates/markdown-slides/**
+                      templates/**
+                      templates/*/.github/**
                   dir_names: true
                   dir_names_max_depth: 2
                   dir_names_exclude_current_dir: true
