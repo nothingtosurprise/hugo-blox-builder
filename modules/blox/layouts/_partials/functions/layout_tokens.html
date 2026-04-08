@@ -28,9 +28,9 @@
 {{ end }}
 
 {{/* Map spacing tokens to CSS values */}}
-{{ $spacing := .layout.spacing | default "comfortable" }}
-{{ $spacing_base := "1rem" }}
-{{ $spacing_section := "4rem" }}
+{{ $spacing := .layout.spacing | default "spacious" }}
+{{ $spacing_base := "1.25rem" }}
+{{ $spacing_section := "6rem" }}
 {{ if eq $spacing "compact" }}
   {{ $spacing_base = "0.75rem" }}
   {{ $spacing_section = "2.5rem" }}
@@ -41,7 +41,7 @@
   {{ $spacing_base = "1.25rem" }}
   {{ $spacing_section = "6rem" }}
 {{ else }}
-  {{ warnf "LAYOUT TOKEN WARNING: Unknown spacing value '%s'. Expected: compact | comfortable | spacious. Falling back to 'comfortable'." $spacing }}
+  {{ warnf "LAYOUT TOKEN WARNING: Unknown spacing value '%s'. Expected: compact | comfortable | spacious. Falling back to 'spacious'." $spacing }}
 {{ end }}
 
 <style>

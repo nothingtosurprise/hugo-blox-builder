@@ -5,10 +5,6 @@ summary: ''
 date: 2026-01-05
 type: landing
 
-design:
-  # Default section spacing
-  spacing: '0'
-
 sections:
   # Developer Hero - Gradient background with name, role, social, and CTAs
   - block: dev-hero

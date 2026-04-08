@@ -2,8 +2,8 @@
 @layer components {
   /* Section styles for Hugo Blox blocks */
   .hbb-section {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: var(--hb-spacing-section, 6rem);
+    padding-bottom: var(--hb-spacing-section, 6rem);
   }
 
   .section-subheading {
