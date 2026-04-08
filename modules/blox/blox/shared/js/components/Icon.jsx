@@ -4,7 +4,7 @@ import {h} from "preact";
 /**
  * Icon component
  * Renders an SVG icon from a raw SVG string passed from Hugo.
- * Decodes JSON-escaped sequences (\u003c) and HTML entities (&lt;, &quot;, &#34;).
+ * Defensively decodes any residual JSON unicode escapes and HTML entities.
  *
  * SVG sizing strategy:
  * - By default, icons size to 1em (matching current font size) — works universally
@@ -16,17 +16,18 @@ import {h} from "preact";
 export const Icon = ({svg, attributes}) => {
   if (!svg) return null;
 
-  // Clean the SVG string: decode HTML entities and TRIM whitespace
+  // Decode any residual JSON unicode escapes (e.g. \u003c → <) and HTML entities
+  // (e.g. &lt; → <) that survive the JSON.parse + DOM read pipeline.
+  // Uses the browser's built-in HTML parser rather than hand-rolled regexes —
+  // this is inherently safe against double-unescaping (CWE-116).
   let decoded = String(svg)
-    .replace(/\\u003c/gi, "<")
-    .replace(/\\u003e/gi, ">")
-    .replace(/&lt;/gi, "<")
-    .replace(/&gt;/gi, ">")
-    .replace(/&quot;/gi, '"')
-    .replace(/&#34;/gi, '"')
-    .replace(/\\u0026/gi, "&")
-    .replace(/&amp;/gi, "&")
+    .replace(/\\u([0-9a-fA-F]{4})/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)))
     .trim();
+
+  // Let the browser's HTML parser handle all entity decoding in one safe pass
+  const _textarea = document.createElement("textarea");
+  _textarea.innerHTML = decoded;
+  decoded = _textarea.value;
 
   const hasWrapper = /<svg[\s>]/i.test(decoded);
 
