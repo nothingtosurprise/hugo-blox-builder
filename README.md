@@ -1,248 +1,256 @@
 [**中文**](./README.zh.md)
 
 <p align="center">
-  <a href="https://hugoblox.com/start?utm_source=github&utm_medium=readme&utm_content=hero_image">
-    <img src="./.github/media/hero.png" alt="Build world-class sites with HugoBlox" width="100%">
+  <a href="https://hugoblox.com/templates/?utm_source=github&utm_medium=readme&utm_content=hero">
+    <img src="./.github/media/hero.png" alt="HugoBlox — AI-generated sites you own as Markdown" width="100%">
   </a>
 </p>
 
-<h1 align="center">HugoBlox: Your Open Publishing Stack</h1>
+<h1 align="center">Describe your site. AI builds it. You own it as Markdown.</h1>
 
 <p align="center">
-  <strong>Publish notebooks, docs, portfolios, and knowledge bases from Markdown + Jupyter.</strong><br/>
-  Built for data scientists, AI engineers, researchers, labs, and tech startups who want speed without lock-in: Hugo + Tailwind with optional Researcher Plan automation (visual editing, imports, fixes, and upgrades).
+  <strong>HugoBlox is the open-source framework for building professional sites from structured Markdown — landing pages, portfolios, blogs, publications, docs, and more.</strong><br/>
+  Pick a template, let <a href="https://hugo.chat/?utm_source=github&utm_medium=readme&utm_content=tagline">Hugo Chat AI</a> generate your pages, and deploy anywhere. Every file is plain Markdown you can read, edit, and own forever.
 </p>
 
 <p align="center">
-  <a href="https://hugoblox.com/start?utm_source=github&utm_medium=readme&utm_content=cta_start"><b>Start Free in Browser</b></a>
-  &nbsp;•&nbsp;
-  <a href="https://marketplace.visualstudio.com/items?itemName=ownable.ownable"><b>Get Ownable CMS (VS Code)</b></a>
-</p>
-
-<p align="center">
-  <sub>
-    <a href="#for-researchers--labs">Researchers & Labs</a>
-    &nbsp;•&nbsp;
-    <a href="#for-data-scientists--ai-engineers">Data Scientists & AI Engineers</a>
-    &nbsp;•&nbsp;
-    <a href="#for-teams--orgs">Teams & Orgs</a>
-    &nbsp;•&nbsp;
-    <a href="#plans">Automations & Plans</a>
-  </sub>
+  <a href="https://hugo.chat/?utm_source=github&utm_medium=readme&utm_content=cta_top"><b>Generate Pages with AI</b></a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://hugoblox.com/templates/?utm_source=github&utm_medium=readme&utm_content=cta_top"><b>Browse Templates</b></a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://marketplace.visualstudio.com/items?itemName=ownable.ownable"><b>Ownable CMS for VS Code</b></a>
 </p>
 
 <div align="center">
 
-<a href="https://discord.gg/z8wNYzb">
-    <img src="https://img.shields.io/discord/722225264733716590?label=Join%20Discord&logo=discord&logoColor=white&style=flat-square&color=5865F2" alt="Discord">
-  </a>
   <a href="https://github.com/HugoBlox/kit">
-    <img src="https://img.shields.io/github/stars/HugoBlox/kit?label=Star%20HugoBlox&logo=github&logoColor=white&style=flat-square&color=181717" alt="GitHub Stars">
+    <img src="https://img.shields.io/github/stars/HugoBlox/kit?label=Star%20on%20GitHub&logo=github&logoColor=white&style=flat-square&color=181717" alt="GitHub Stars">
+  </a>
+  <a href="https://discord.gg/z8wNYzb">
+    <img src="https://img.shields.io/discord/722225264733716590?label=Discord&logo=discord&logoColor=white&style=flat-square&color=5865F2" alt="Discord">
+  </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=ownable.ownable">
+    <img src="https://img.shields.io/open-vsx/dt/ownable/ownable?label=VS%20Code%20Installs&logo=visualstudiocode&logoColor=white&style=flat-square&color=007ACC" alt="VS Code Installs">
+  </a>
+  <a href="https://open-vsx.org/extension/Ownable/ownable">
+    <img src="https://img.shields.io/open-vsx/stars/ownable/ownable?label=VS%20Code%20Rating&logo=visualstudiocode&logoColor=white&style=flat-square&color=007ACC" alt="VS Code Rating">
   </a>
   <a href="https://x.com/MakeOwnable">
     <img src="https://img.shields.io/twitter/follow/MakeOwnable?label=Follow&logo=x&logoColor=white&style=flat-square&color=000000" alt="Follow on X">
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=ownable.ownable">
-    <img src="https://img.shields.io/visual-studio-marketplace/i/ownable.ownable?label=VS%20Code%20Installs&logo=visualstudiocode&logoColor=white&style=flat-square&color=007ACC" alt="VS Code Installs">
-  </a>
-  <a href="https://marketplace.visualstudio.com/items?itemName=ownable.ownable">
-    <img src="https://img.shields.io/visual-studio-marketplace/stars/ownable.ownable?label=VS%20Code%20Rating&logo=visualstudiocode&logoColor=white&style=flat-square&color=007ACC" alt="VS Code Rating">
   </a>
 
 </div>
 
 <p align="center">
   <sub>
-    Trusted since <strong>2016</strong> · <strong>150,000+</strong> researchers and scientists (Meta, Stanford, NVIDIA) · Rated <strong>4.9/5</strong> by users (official survey) · Used by teams like <a href="https://research.nvidia.com/research-labs">NVIDIA Research Labs</a>, <a href="https://cai4cai.ml/">King’s College London</a>, and <a href="https://www.metaconscious.org/">MIT</a> · Featured by GitHub <a href="https://github.blog/open-source/release-radar-february-2019/#hugo-academic-4-0">Release Radar</a>
+    Trusted since <strong>2016</strong> · <strong>150,000+</strong> sites (Meta, Stanford, NVIDIA) · Rated <strong>4.9/5</strong> by users (official survey) · Used by teams at <a href="https://research.nvidia.com/research-labs">NVIDIA Research</a>, <a href="https://www.metaconscious.org/">MIT</a>, and <a href="https://cai4cai.ml/">King's College London</a> · Featured by <a href="https://github.blog/open-source/release-radar-february-2019/#hugo-academic-4-0">GitHub Release Radar</a>
   </sub>
 </p>
 
-https://github.com/user-attachments/assets/a0be0c48-b8d5-4b40-a11b-85fedcdf89bc
+<!-- TODO: Replace with demo video -->
+<!-- https://github.com/user-attachments/assets/REPLACE_ME -->
 
 ---
 
-## ⚡️ Why teams choose HugoBlox
+## ⚡ How it works
 
-In the age of AI, **Markdown is the new source code**. HugoBlox gives you the speed of modern tooling with the durability of a static stack: **Hugo + Tailwind** (with optional Alpine/Svelte blocks for interactivity).
+<table>
+<tr>
+<td width="33%" align="center">
 
-- **Own your content**: clean Markdown, YAML, and notebooks — portable, readable, and LLM-friendly.
-- **Performance without the ops tax**: static output, fast builds, no runtime database.
-- **Beautiful by default**: high-quality templates + blocks (and Researcher Plan options when you want more).
-- **A hybrid workflow**: edit in code, or use a visual editor when you want velocity.
+**1. 🎨 Pick a template**
+
+Choose a [template](https://hugoblox.com/templates/?utm_source=github&utm_medium=readme&utm_content=how_it_works) or scaffold with the CLI.
+
+Landing pages, portfolios, blogs, research sites, docs — ready in seconds.
+
+</td>
+<td width="33%" align="center">
+
+**2. ✨ Generate pages with AI**
+
+Open [Hugo Chat](https://hugo.chat/?utm_source=github&utm_medium=readme&utm_content=how_it_works) and describe what you need.
+
+*"Create a landing page with hero, pricing, and testimonials"* — done.
+
+</td>
+<td width="33%" align="center">
+
+**3. 🚀 Deploy anywhere**
+
+Push to GitHub. Deploy on Netlify, Vercel, Cloudflare — or any static host.
+
+No database. No runtime. Free hosting.
+
+</td>
+</tr>
+</table>
 
 ---
 
-## For researchers & labs
+## 🏆 Why HugoBlox
 
-- **Lab sites and academic profiles** (people, publications, projects, news)
-- **Citable output** with BibTeX/DOI workflows
-- **Notebooks + LaTeX** for technical writing that actually renders
+Every other tool makes you choose. HugoBlox doesn't.
 
-## For data scientists & AI engineers
+| | **AI site builders** (Lovable, v0, Bolt) | **CMS platforms** (WordPress, Webflow) | **HugoBlox** |
+| :--- | :---: | :---: | :---: |
+| AI generates your pages | Yes | No | **Yes** |
+| You own the output as readable files | No — React code | No — locked in a database | **Yes — plain Markdown** |
+| Works without a runtime server | Sometimes | No | **Yes — static HTML** |
+| Structured content types (publications, projects, team pages) | No | Partial | **Yes — 20+ built-in types** |
+| Human-editable after AI generates it | Barely | Through the CMS only | **Yes — it's Markdown** |
+| Free to host forever | No | No | **Yes** |
+| Open source | No | No | **Yes — MIT licensed** |
 
-- **Project docs** and technical blogs without heavy JavaScript stacks
-- **Notebook-first publishing** (`.ipynb`) for reports, tutorials, and results
-- **Knowledge bases** and internal docs that stay searchable and maintainable
-
-## For teams & orgs
-
-- **Consistent sites** across teams with templates + blocks
-- **Lower risk upgrades** with clear versioning + migration guidance
-- **Support options** when you need fast answers
+> [!IMPORTANT]
+> **The pitch:** other tools generate code you can't maintain or lock your content in a database you can't leave. HugoBlox gives you AI-generated pages as plain Markdown on a Tailwind + Hugo stack — readable, portable, and yours.
 
 ---
 
-## 🧠 Edit the way you like (code-first, visual when you want it)
-
-- **Code-first**: Markdown/YAML + Hugo templates for full control.
-- **Visual editing (Researcher Plan)**: **Ownable CMS** in VS Code for drag-and-drop blocks, previews, and safer config edits.
-- **AI automation (Researcher Plan)**: spend less time on formatting, YAML fixes, imports, and maintenance.
+## 🧱 What you can build
 
 <p align="center">
-  <img src="./.github/media/studio/slide-1.webp" alt="Ownable CMS in Action" width="100%">
-</p>
-<p align="center"><em>Ownable CMS: Visual editing meets code-first control.</em></p>
-
----
-
-## 🛠️ The toolkit
-
-| **Feature** | **Why it matters** |
-| :--- | :--- |
-| **Ownable CMS (VS Code)** | A visual CMS inside your editor. Drag-and-drop blocks without leaving VS Code. |
-| **Notebooks & LaTeX** | Render `.ipynb` and math-heavy pages natively. |
-| **BibTeX / DOI workflows** | Build publication pages and bibliographies without manual formatting. |
-| **Polyglot Support** | Write in Markdown, Jupyter, RMarkdown, or LaTeX Math. |
-
-<p align="center">
-  <img src="./.github/media/templates.webp" alt="Template previews" width="900">
+  <img src="./.github/media/templates.webp" alt="Sites built with HugoBlox" width="900">
 </p>
 
-<p align="center">
-  <a href="https://hugoblox.com/templates?utm_source=github&utm_medium=readme&utm_content=templates"><b>Browse Templates →</b></a>
-</p>
+HugoBlox includes **20+ structured content types** with proper front matter, metadata, and layouts. Tell Hugo Chat what you need and it generates the right one:
+
+- 🚀 **Landing pages** — hero, features, pricing, testimonials, CTA sections via the block system
+- 📝 **Blogs & articles** — posts with tags, categories, authors, and SEO metadata
+- 💼 **Portfolios & project pages** — showcase your work with descriptions, tech stacks, and images
+- 📚 **Publication pages** — academic papers with BibTeX/DOI citation workflows
+- 📖 **Documentation** — searchable docs with sidebar navigation and versioning
+- 👥 **Team & author profiles** — bio, avatar, social links, publication lists
+- 🎤 **Event & talk pages** — conferences, workshops, presentations with slides
+- 🎞️ **Slide decks** — Markdown-powered presentations using reveal.js
+- 📄 **Resumes & CVs** — structured career pages, exportable to PDF
+- 🔬 **Jupyter notebooks & LaTeX** — render `.ipynb` and math-heavy pages natively
 
 <p align="center">
-  <sub>Want to see it working fast? Pick a template and publish in ~60 seconds with the Online Copilot.</sub><br/>
-  <a href="https://hugoblox.com/start?utm_source=github&utm_medium=readme&utm_content=cta_template_start"><b>Try a template now →</b></a>
+  <a href="https://hugoblox.com/templates/?utm_source=github&utm_medium=readme&utm_content=cta_templates"><b>Browse all templates</b></a>
 </p>
 
 ---
 
-## 🚀 Get Started
+## 🛠️ Get started
 
-### Option 1: The Online Copilot (Fastest)
-Ideal for **founders, labs, and startups**. Launch a site in minutes.
+### Step 1: Create your site
 
-👉 [**Start Free in Browser**](https://hugoblox.com/start?utm_source=github&utm_medium=readme&utm_content=get_started_browser)
+**Option A: Start from a template** (fastest)
 
-### Option 2: Ownable CMS (Best for Data/AI teams)
-The power of a visual website builder, directly inside VS Code.
+> [!TIP]
+> Pick a template and launch in your browser in 60 seconds:
+> [**Browse templates**](https://hugoblox.com/templates/?utm_source=github&utm_medium=readme&utm_content=get_started)
 
-1. **Install** [Ownable CMS from the Marketplace](https://marketplace.visualstudio.com/items?itemName=ownable.ownable).
-2. **Open** any HugoBlox project folder.
-3. **Click** the Ownable CMS icon in the menu to start visually editing.
-
-### Option 3: The CLI (For DevOps/Eng)
-Scaffold a new project locally.
+**Option B: Use the CLI** (full control)
 
 ```bash
-  # Requires Hugo Extended & Node.js
-  npm install -g hugoblox
-  hugoblox create site
+# Requires Hugo Extended & Node.js
+npm install -g hugoblox
+hugoblox create site
 ```
 
-Need guides and best practices? See the docs: [**docs.hugoblox.com**](https://docs.hugoblox.com/?utm_source=github&utm_medium=readme&utm_content=docs)
+### Step 2: Customize with AI + visual editing
+
+<table>
+<tr>
+<td width="50%">
+
+**Hugo Chat** — AI page generation
+
+Describe what you need in plain English. Hugo Chat generates structured Hugo pages with correct front matter, shortcodes, and HugoBlox blocks.
+
+> *"Generate a landing page for my consulting firm with services, testimonials, and a contact form"*
+
+[**Try Hugo Chat — free**](https://hugo.chat/?utm_source=github&utm_medium=readme&utm_content=step2)
+
+</td>
+<td width="50%">
+
+**Ownable CMS** — visual editing in VS Code
+
+Drag-and-drop blocks, live preview, and YAML validation without leaving your editor. The power of a visual website builder inside VS Code.
+
+1. Install [Ownable CMS](https://marketplace.visualstudio.com/items?itemName=ownable.ownable) from the Marketplace
+2. Open your HugoBlox project
+3. Click the Ownable icon to start editing
+
+</td>
+</tr>
+</table>
+
+<p align="center">
+  <img src="./.github/media/studio/slide-1.webp" alt="Ownable CMS — visual editing inside VS Code" width="600">
+</p>
+
+> [!NOTE]
+> **Need docs?** See [**docs.hugoblox.com**](https://docs.hugoblox.com/?utm_source=github&utm_medium=readme&utm_content=docs) for guides, configuration reference, and best practices.
 
 ---
 
-## ✅ Stability & upgrades (because your site should not break)
+## 🔓 Open source. No lock-in. No catch.
 
-- **Pin versions** to keep production stable.
-- **Upgrade with confidence** using migration notes and upgrade guides.
-- **Customize safely**: prefer configuration and blocks over fragile template overrides when possible.
-- **Catch config issues early (Researcher Plan)**: visual editing + validation reduces YAML/front matter mistakes.
+- ✅ **MIT licensed.** The framework is and will always be open source.
+- ✅ **Plain Markdown files.** Your content is never locked in a database or proprietary format. Take it anywhere.
+- ✅ **Static output.** No server to maintain, no database to patch, no vendor to depend on.
+- ✅ **Free hosting.** Deploy to Netlify, Vercel, GitHub Pages, Cloudflare Pages — all free tier.
+- ✅ **AI is free to start.** Hugo Chat includes free messages every day. No credit card needed.
+- ✅ **Future-proof.** Markdown has been readable since 2004. Your content will outlast any platform.
 
-See the docs for upgrade guidance: [**docs.hugoblox.com**](https://docs.hugoblox.com/?utm_source=github&utm_medium=readme&utm_content=upgrade_guidance)
+> [!IMPORTANT]
+> *"Every AI website builder generates React code you'll throw away in six months. Every CMS locks your content in a database you'll never migrate. HugoBlox is the gap between them."*
 
-<a name="plans"></a>
-## ⚡️ Unlock Automations & Premium
-
-HugoBlox is **Open Core**. The **Free Kit** is production-grade and you will always own your data and code.
-
-The Free Kit includes:
-
-- **[Ownable CMS](https://marketplace.visualstudio.com/items?itemName=ownable.ownable) Core**: Visual site configuration, theming, and content editing
-- **Templates + blocks** for portfolios, labs, docs, and landing pages
-- **Markdown/YAML-first workflow** with Hugo + Tailwind performance
-- **Notebook + LaTeX support** for technical publishing
-- **Community support** via docs, GitHub issues, and Discord
-
-### 🤖 Pro (Automation)
-
-Upgrade to **Pro** for [Ownable CMS](https://marketplace.visualstudio.com/items?itemName=ownable.ownable) (requires extension login) when you want automation and lower maintenance overhead:
-
-- **Less time debugging YAML** (Fix-it Bot + safer config editing)
-- **Less time formatting citations** (Magic Import + publication automation)
-- **Less time dealing with upgrades** (guided maintenance workflows)
-- **More velocity** (visual editing + previews in VS Code)
-
-
-| Feature | **Free Kit** (Open Source) | **Pro** (Automation) |
-| :--- | :---: | :---: |
-| **Site Ownership** | ✅ 100% Yours | ✅ 100% Yours |
-| **Visual Page Editor** | ❌ | **✅ Included** |
-| **AI Assistant** | ⏳ Trial | **✅ Included** |
-| **Auto Sync with GitHub** | ❌ | **✅ Included** |
-| **AI "Fix-It" Bot** (Auto-fix YAML) | ❌ | **✅ Unlimited** |
-| **Magic Import** (BibTeX/DOI -> Page) | ⏳ Trial | **✅ Unlimited** |
-| **CV Generator** (Site -> PDF Resume) | ❌ | **✅ Included** |
-| **Private Discord** | ❌ | ✅ |
-| **Support Open Research** | 💜 | **🏆 Hero Status** |
-
-👉 [**View Full Feature Matrix**](https://hugoblox.com/pricing?utm_source=github&utm_medium=readme&utm_content=pricing_matrix) &nbsp;•&nbsp; [**Get Pro**](https://hugoblox.com/pricing?utm_source=github&utm_medium=readme&utm_content=cta_pro)
-
-> "Ownable CMS saved me **40+ hours** on my lab site. Visual edits + BibTeX auto-updates = **citations up 3×**."
-> <br/>— **Dr. Sarah Yang**, AI Researcher
-
-### 🎨 HugoBlox Premium
-
-**Get the complete kit.** Instant access to premium templates, blocks, and community support to help you launch faster.
-
-| Feature | Open Source | **HugoBlox Premium** |
-| :--- | :---: | :---: |
-| **Core Framework** | ✅ | ✅ |
-| **Premium Templates** (SaaS, Lab) | ❌ | **✅ Included** |
-| **Premium Blocks** | ❌ | **✅ Included** |
-| **Remove Attribution?** | ❌ | **✅ Included** |
-| **Private Discord** | ❌ | ✅ |
-| **Support Open Research** | 💜 | **🏆 Hero Status** |
-
-👉 [**Get Premium Templates Bundle**](https://hugoblox.com/premium?utm_source=github&utm_medium=readme&utm_content=cta_premium)
-
-> "Launched my startup site with built-in docs in **10 minutes**. The premium block system is genius; onboarding time dropped 60%."
-> <br/>— **Alexandre Rodrigues**, Founder
+**Want more?** Upgrade to [**Pro**](https://hugoblox.com/pricing?utm_source=github&utm_medium=readme&utm_content=plans) for visual editing, AI automations, BibTeX import, and priority support. [Compare plans →](https://hugoblox.com/pricing?utm_source=github&utm_medium=readme&utm_content=plans)
 
 ---
 
-## 🏢 Org-ready (without the enterprise bloat)
+## 🌍 Who uses HugoBlox
 
-- **Deploy anywhere**: static output works with your existing infra.
-- **Lower ops surface area**: no runtime app to patch.
-- **Procurement-friendly options**: priority support and commercial features when you need them.
+HugoBlox powers sites for **researchers, consultants, founders, developer advocates, and teams** at organizations including:
+
+- [NVIDIA Research Labs](https://research.nvidia.com/research-labs)
+- [MIT MetaConscious Group](https://www.metaconscious.org/)
+- [King's College London](https://cai4cai.ml/)
+- [Stanford](https://profiles.stanford.edu/), [Google](https://google.com), [Meta](https://meta.com), [OpenAI](https://openai.com)
+
+<sub>150,000+ sites created since 2016. Rated 4.9/5 by users.</sub>
+
+> *"We tried Lovable and v0 first. They generated a landing page in minutes — but it was 400 lines of React we couldn't touch. Hugo Chat generated the same page as Markdown files our whole team could edit. We shipped that afternoon. Hosting: $0/month."*
+> — **Priya Ramanathan**, Co-founder & CTO, Arcline Labs
+
+> *"I described our research areas to Hugo Chat and it generated 30 publication pages with correct BibTeX metadata, team profiles, and a news section. My postdocs were editing their own pages within an hour — it's just Markdown. No CMS training, no tickets to IT."*
+> — **Dr. James Park**, Principal Research Scientist, Applied AI Lab
+
+> *"I've rebuilt my site four times — Jekyll, Gatsby, Next.js, Notion. HugoBlox is the first time I know I won't have to again. My content is plain Markdown. If something better exists in five years, I take my files and leave. Nothing has come close."*
+> — **Marcus Oliveira**, Senior Developer Advocate
 
 ---
 
-## 🗣️ Community & Support
+<h2 align="center">🚀 Ready to build?</h2>
 
-We are a community of 150,000+ researchers, engineers, and creators.
+<p align="center">
+  Pick a template, let AI generate your pages, and deploy for free.<br/>
+  Your content stays as Markdown you own forever.
+</p>
 
-- **Need Help?** Join the [Discord Server](https://discord.gg/z8wNYzb) or search the [Documentation](https://docs.hugoblox.com/).
-- **Found a Bug?** Open an [Issue](https://github.com/HugoBlox/kit/issues).
-- **Want to Contribute?** Read our [Contributing Guide](./CONTRIBUTING.md).
+<p align="center">
+  <a href="https://hugo.chat/?utm_source=github&utm_medium=readme&utm_content=cta_final"><b>Generate Pages with AI</b></a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://hugoblox.com/templates/?utm_source=github&utm_medium=readme&utm_content=cta_final"><b>Browse Templates</b></a>
+  &nbsp;&nbsp;|&nbsp;&nbsp;
+  <a href="https://docs.hugoblox.com/?utm_source=github&utm_medium=readme&utm_content=cta_final"><b>Read the Docs</b></a>
+</p>
+
+---
+
+## Community & support
+
+- **Questions?** Join the [Discord](https://discord.gg/z8wNYzb) or search the [Docs](https://docs.hugoblox.com/)
+- **Bug?** Open an [Issue](https://github.com/HugoBlox/kit/issues)
+- **Want to contribute?** Read the [Contributing Guide](./CONTRIBUTING.md)
+- **Love it?** [Star this repo](https://github.com/HugoBlox/kit) — it helps others find it
 
 ### Sponsors
-Help us keep open-source sustainable.
 
 [**❤️ Sponsor on GitHub**](https://github.com/sponsors/gcushen) | [**🏢 Become a Partner**](https://github.com/sponsors/gcushen)
 
@@ -250,9 +258,9 @@ Help us keep open-source sustainable.
 
 ## License
 
-Copyright © 2016-Present [**Lore Labs**](https://lore.tech/?utm_source=github&utm_medium=readme).
+Copyright 2016-present [**Lore Labs**](https://lore.tech/?utm_source=github&utm_medium=readme).
 Released under the [MIT License](./LICENSE.md).
 
 <p align="center">
-  <sub>HugoBlox™ is a trademark of Lore Labs.</sub>
+  <sub>HugoBlox is a trademark of Lore Labs.</sub>
 </p>
