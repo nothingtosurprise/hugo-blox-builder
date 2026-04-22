@@ -83,9 +83,9 @@ github.com/HugoBlox/kit/modules/slides -> ../../../modules/slides"
 if [ "$PAGEFIND" = true ]; then
     hugo
     if command -v pnpm >/dev/null 2>&1; then
-        pnpm exec pagefind --site "public" --output-subdir ../static/pagefind
+        pnpm exec pagefind --site "public" --output-subdir ../static/pagefind 2>/dev/null || true
     else
-        npm_config_yes=true npx pagefind --site "public" --output-subdir ../static/pagefind
+        npm_config_yes=true npx pagefind --site "public" --output-subdir ../static/pagefind 2>/dev/null || true
     fi
 fi
 
