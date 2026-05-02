@@ -87,12 +87,13 @@ function StarStrip({stars}) {
   );
 }
 
-function TrustStrip({trust}) {
+function TrustStrip({trust, alignKey = "center"}) {
   if (!trust) return null;
   const {stars, text} = trust;
   if (!stars && !text) return null;
+  const justify = alignKey === "left" ? "justify-start" : "justify-center";
   return (
-    <div class="mt-8 flex items-center justify-center gap-3 flex-wrap">
+    <div class={`mt-8 flex items-center ${justify} gap-3 flex-wrap`}>
       {stars != null && <StarStrip stars={stars} />}
       {text && <span class="text-sm text-gray-600 dark:text-gray-400" dangerouslySetInnerHTML={{__html: renderText(text)}} />}
     </div>
@@ -108,13 +109,14 @@ const BADGE_COLORS = {
   rose: "bg-rose-100 text-rose-700 dark:bg-rose-900/40 dark:text-rose-300",
 };
 
-function AnnouncementPill({announcement}) {
+function AnnouncementPill({announcement, alignKey = "center"}) {
   if (!announcement?.text) return null;
   const badge = announcement.badge;
   const badgeCls = badge && BADGE_COLORS[badge.color] ? BADGE_COLORS[badge.color] : BADGE_COLORS.primary;
+  const justify = alignKey === "left" ? "sm:justify-start" : "sm:justify-center";
 
   return (
-    <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+    <div class={`hidden sm:mb-8 sm:flex ${justify}`}>
       <div class="relative flex items-center gap-2 rounded-full pl-1 pr-4 py-1 text-sm leading-6 text-gray-600 dark:text-gray-300 ring-1 ring-gray-900/10 dark:ring-gray-300/30 hover:ring-gray-900/20 dark:hover:ring-gray-300/50 transition-all">
         {badge?.text && <span class={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${badgeCls}`}>{badge.text}</span>}
         {!badge?.text && <span class="pl-2" />}
@@ -137,16 +139,39 @@ function AnnouncementPill({announcement}) {
   );
 }
 
+// Hero size presets — full literal class strings (Tailwind scanner safety).
+// `default` is the modern 2026 baseline (~96-160px vertical padding).
+// `tall` is the legacy size for when the hero needs more visual weight.
+// `viewport` fills the screen — vertically centred content, useful for splash heroes.
+const SIZE_CLASSES = {
+  compact: "py-16 sm:py-20 lg:py-24",
+  default: "py-24 sm:py-32 lg:py-40",
+  tall: "py-32 sm:py-48 lg:py-56",
+  viewport: "min-h-screen flex flex-col justify-center py-16",
+  none: "",
+};
+
+const ALIGN_TEXT = {center: "text-center", left: "text-left"};
+const ALIGN_FLEX = {center: "justify-center", left: "justify-start"};
+const ALIGN_MX = {center: "mx-auto", left: ""};
+
 // Hero Block Component - Single implementation
 export const HeroBlock = ({content, design, _id, icon_svg, secondary_icon_svg}) => {
-  const paddingClasses = design?.no_padding ? "" : "py-32 sm:py-48 lg:py-56";
+  // Backward compat: legacy `no_padding: true` maps to size: "none"
+  const sizeKey = SIZE_CLASSES[design?.size] ? design.size : design?.no_padding ? "none" : "default";
+  const sizeClasses = SIZE_CLASSES[sizeKey];
+
+  const alignKey = design?.alignment === "left" ? "left" : "center";
+  const textAlign = ALIGN_TEXT[alignKey];
+  const flexAlign = ALIGN_FLEX[alignKey];
+  const mxAuto = ALIGN_MX[alignKey];
 
   return (
-    <div class="relative isolate px-6 pt-14 lg:px-8">
-      <div class={`mx-auto max-w-2xl ${paddingClasses}`}>
-        <AnnouncementPill announcement={content.announcement} />
+    <div class="relative isolate px-6 lg:px-8">
+      <div class={`mx-auto max-w-2xl ${sizeClasses}`}>
+        <AnnouncementPill announcement={content.announcement} alignKey={alignKey} />
 
-        <div class="text-center">
+        <div class={textAlign}>
           {/* Eyebrow */}
           {content.eyebrow && (
             <p
@@ -166,20 +191,20 @@ export const HeroBlock = ({content, design, _id, icon_svg, secondary_icon_svg}) 
           {/* Subtitle/Text */}
           {content.text && (
             <p
-              class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+              class={`mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300 max-w-2xl ${mxAuto}`}
               dangerouslySetInnerHTML={{__html: renderText(content.text)}}
             />
           )}
 
           {/* Action Buttons */}
           {(content.primary_action?.url || content.secondary_action?.url) && (
-            <div class="mt-10 flex items-center justify-center gap-x-6 flex-wrap gap-y-3">
+            <div class={`mt-10 flex items-center ${flexAlign} gap-x-6 flex-wrap gap-y-3`}>
               <ActionButton action={content.primary_action} defaultStyle="gradient" iconSvg={icon_svg} />
               <ActionButton action={content.secondary_action} defaultStyle="text" iconSvg={secondary_icon_svg} />
             </div>
           )}
 
-          <TrustStrip trust={content.trust} />
+          <TrustStrip trust={content.trust} alignKey={alignKey} />
         </div>
       </div>
     </div>

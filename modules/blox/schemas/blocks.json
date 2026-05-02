@@ -87,7 +87,9 @@
             "cta-styles",
             "announcement-banner",
             "announcement-badge",
-            "trust-strip"
+            "trust-strip",
+            "size-presets",
+            "alignment"
           ],
           "complexity": "simple",
           "preact": true,
