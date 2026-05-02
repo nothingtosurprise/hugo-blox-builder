@@ -66,7 +66,9 @@ function PriceDisplay({price = {}, price_suffix, price_note, price_note_monthly,
   if (isFree) {
     return (
       <div class="mb-6">
-        <p class="text-5xl font-bold tracking-tight text-gray-900 dark:text-white">Free</p>
+        {/* text-4xl matches the visual weight of `$XX` prices (where $ is text-2xl
+            and the digit is text-5xl) without "Free" dominating the row. */}
+        <p class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">Free</p>
         {note && <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">{note}</p>}
       </div>
     );
@@ -203,8 +205,11 @@ function PricingTier({tier, billing, icon_svgs}) {
             </span>
           </div>
         )}
-        {/* Gradient border: 1px gradient ring via padding + colored wrapper */}
-        <div class="rounded-3xl p-px bg-gradient-to-br from-primary-400 via-primary-500 to-secondary-500 shadow-2xl">
+        {/* Gradient border ring (2px, with brand-coloured glow) wrapping a white inner
+            card. The thicker p-0.5 makes the gradient direction visible at edge/corners,
+            and shadow-primary-500/20 carries the visual lift since primary→secondary in
+            light mode have similar hues and the gradient alone reads as flat. */}
+        <div class="rounded-3xl p-0.5 bg-gradient-to-br from-primary-500 to-secondary-500 shadow-2xl shadow-primary-500/20">
           <div class="flex flex-col rounded-3xl p-8 bg-white dark:bg-gray-900 h-full">
             <TierCardContent {...cardProps} />
           </div>
