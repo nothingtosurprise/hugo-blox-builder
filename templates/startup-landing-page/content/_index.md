@@ -6,20 +6,30 @@ type: landing
 sections:
   - block: hero
     content:
-      title: Build Your Landing Pages with Hugo Blox
-      text: 🧱 EASY. FREE (OPEN SOURCE). NO-CODE  🧱
+      eyebrow: The open-source page builder
+      title: Build your landing page with [Hugo Blox]
+      text: Production-grade blocks. Edit in Markdown and YAML. Deploy anywhere — for free.
       primary_action:
         text: Get Started
         url: https://hugoblox.com/templates/
         icon: rocket-launch
+        style: gradient
       secondary_action:
         text: Read the docs
         url: https://docs.hugoblox.com
+        icon: book-open
+        style: ghost
       announcement:
-        text: "Announcing the release of version 1."
+        badge:
+          text: NEW
+          color: primary
+        text: Hugo Blox v1 is here.
         link:
-          text: "Read more"
+          text: Read more
           url: "/blog/"
+      trust:
+        stars: 5
+        text: Loved by **10,000+** developers · Trusted by teams at Google, OpenAI, NVIDIA
     design:
       spacing:
         padding: [0, 0, 0, 0]

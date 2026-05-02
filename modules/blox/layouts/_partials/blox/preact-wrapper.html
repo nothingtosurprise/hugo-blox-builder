@@ -25,6 +25,14 @@
   {{ end }}
 {{ end }}
 
+{{/* Resolve icon for secondary_action (hero) */}}
+{{ with $block.content.secondary_action.icon }}
+  {{ $icon_data := partial "functions/get_icon_data" (dict "name" .) }}
+  {{ if $icon_data }}
+    {{ $props = merge $props (dict "secondary_icon_svg" $icon_data) }}
+  {{ end }}
+{{ end }}
+
 {{/* Resolve icon for single button (cta-card) */}}
 {{ with $block.content.button.icon }}
   {{ $icon_data := partial "functions/get_icon_data" (dict "name" .) }}

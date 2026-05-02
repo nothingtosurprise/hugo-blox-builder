@@ -78,7 +78,17 @@
       "categories": ["marketing", "landing"],
       "meta": {
         "hugoblox": {
-          "capabilities": ["headline", "subtitle", "dual-cta", "announcement-banner"],
+          "capabilities": [
+            "headline",
+            "title-highlight",
+            "eyebrow",
+            "subtitle",
+            "dual-cta",
+            "cta-styles",
+            "announcement-banner",
+            "announcement-badge",
+            "trust-strip"
+          ],
           "complexity": "simple",
           "preact": true,
           "schemaUrl": "https://api.hugoblox.com/v1/blocks/hero/schema"
