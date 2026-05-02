@@ -72,11 +72,15 @@ security:
       - ^HUGO_
       # Allow continuous integration vars
       - ^CI$
-  # Note: security.node.permissions is intentionally NOT set here. Hugo's
-  # built-in defaults already permit `tailwindcss` for allowAddons,
-  # allowChildProcess, and allowWorker (see https://gohugo.io/configuration/security/).
-  # Restating the defaults would create maintenance debt if upstream evolves them
-  # (e.g. when @tailwindcss/oxide native bindings need new permissions).
+  node:
+    permissions:
+      # Hugo's default allowChildProcess regex permits tailwindcss/npx but not
+      # `getconf`. @tailwindcss/cli pulls in @parcel/watcher, whose bundled
+      # detect-libc@1 synchronously spawns `getconf GNU_LIBC_VERSION` at
+      # require time on Linux to pick glibc vs musl prebuilds. Without this
+      # entry, Ubuntu CI fails with ERR_ACCESS_DENIED while macOS works
+      # (detect-libc short-circuits on Darwin).
+      allowChildProcess: ^(tailwindcss|npx|getconf)$
 outputFormats:
   backlinks:
     mediaType: application/json
